@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:spoten_movies/src/features/home/presentation/pages/home.dart';
+import 'package:spoten_movies/src/features/home/presentation/home.dart';
 
 class App extends StatelessWidget {
   const App({Key key}) : super(key: key);

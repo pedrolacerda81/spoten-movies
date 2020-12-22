@@ -27,14 +27,18 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.0
   dio: ^3.0.10
-  recase: ^3.0.1
   equatable: ^1.2.5
   flutter_bloc: ^6.1.1
   freezed_annotation: ^0.12.0
+  recase: ^3.0.1
+  dartz: ^0.9.1
+  kt_dart: ^0.8.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner: null
+  freezed: ^0.12.2
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
