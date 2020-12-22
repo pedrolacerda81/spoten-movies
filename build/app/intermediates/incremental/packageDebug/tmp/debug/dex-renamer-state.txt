@@ -1,0 +1,4 @@
+#Mon Dec 21 15:56:04 AMT 2020
+base.0=/Users/pedrolacerda/dev/spoten-movies/spoten_movies/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
