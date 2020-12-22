@@ -1,10 +1,9 @@
 import 'package:dio/dio.dart';
-import 'package:spoten_movies/src/core/domain/data/abstract_datasource.dart';
 
-class Datasource implements AbstractDatasource {
+class DataSource {
   final Dio dio = Dio();
 
-  Datasource() {
-    dio.options.baseUrl = 'https://vex.webvelit.com.br/api';
+  DataSource() {
+    dio.options.baseUrl = 'https://api.themoviedb.org';
   }
 }
