@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:spoten_movies/src/app.dart';
+import 'package:flutter_riverpod/all.dart';
 
-void main() => runApp(App());
+import 'app.dart';
+
+void main() {
+  runApp(ProviderScope(child: MyApp()));
+}
