@@ -43,8 +43,8 @@ class ComentListTile extends StatelessWidget {
   }
 
   String _generateRandomName() {
-    final coment = random.nextInt(4);
-    switch (coment) {
+    final name = random.nextInt(4);
+    switch (name) {
       case 0:
         return 'Pedro Costa';
         break;
@@ -63,8 +63,8 @@ class ComentListTile extends StatelessWidget {
   }
 
   String _generateRandomStarRate() {
-    final coment = random.nextInt(5);
-    switch (coment) {
+    final rate = random.nextInt(5);
+    switch (rate) {
       case 0:
         return '⭐️';
         break;
@@ -82,6 +82,15 @@ class ComentListTile extends StatelessWidget {
     }
   }
 
+  String getRandomDate() {
+    final date = random.nextInt(9);
+    if (date == 0) {
+      return '0${date + 3}/0${date + 2}/201${date + 4}';
+    } else {
+      return '0${random.nextInt(9)}/0${random.nextInt(9)}/201${random.nextInt(9)}';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -95,11 +104,21 @@ class ComentListTile extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                '${_generateRandomName()} - ${_generateRandomStarRate()}',
+                '${_generateRandomName()} ',
                 style: TextStyle(
                   color: Colors.black87,
                   fontSize: 14.0,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                '${_generateRandomStarRate()} ',
+              ),
+              Text(
+                getRandomDate(),
+                style: TextStyle(
+                  color: Colors.grey[700],
+                  fontSize: 10.0,
                 ),
               ),
             ],

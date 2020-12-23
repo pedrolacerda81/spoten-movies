@@ -7,12 +7,14 @@ class Movie {
   final String title;
   final String posterPath;
   final String overview;
+  final double popularity;
 
   Movie({
     @required this.id,
     @required this.title,
     @required this.posterPath,
     @required this.overview,
+    @required this.popularity,
   });
 
   Map<String, dynamic> toMap() {
@@ -21,6 +23,7 @@ class Movie {
       'title': title,
       'poster_path': posterPath,
       'overview': overview,
+      'popularity': popularity,
     };
   }
 
@@ -28,10 +31,12 @@ class Movie {
     if (map == null) return null;
 
     return Movie(
-        id: map['id'],
-        title: map['title'],
-        posterPath: map['poster_path'],
-        overview: map['overview']);
+      id: map['id'],
+      title: map['title'],
+      posterPath: map['poster_path'],
+      overview: map['overview'],
+      popularity: map['popularity'],
+    );
   }
 
   String toJson() => json.encode(toMap());

@@ -41,12 +41,55 @@ class MovieDetails extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 10.0),
-                Text(
-                  movie.overview == ''
-                      ? "Sorry, couldn't load movie's overview 😰"
-                      : movie.overview,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 16.0),
+                Container(
+                  margin: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 10.0),
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(color: Colors.grey, width: 1.0),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.only(bottom: 10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'OVERVIEW',
+                              style: TextStyle(
+                                color: Colors.grey[50],
+                                fontSize: 10.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(bottom: 10.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Flexible(
+                              child: Text(
+                                movie.overview == ''
+                                    ? "Sorry, couldn't load movie's overview. 😱"
+                                    : movie.overview,
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 5,
+                                style: TextStyle(
+                                  color: Colors.grey[50],
+                                  fontSize: 14.0,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   margin: const EdgeInsets.only(top: 10.0),
@@ -58,6 +101,65 @@ class MovieDetails extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
+                      Container(
+                        padding: const EdgeInsets.only(bottom: 10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'POPULARITY',
+                              style: TextStyle(
+                                color: Colors.grey[50],
+                                fontSize: 10.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(bottom: 10.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              movie.popularity.toString(),
+                              style: TextStyle(
+                                color: Colors.grey[50],
+                                fontSize: 20.0,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(top: 10.0),
+                  padding: const EdgeInsets.only(top: 10.0),
+                  decoration: BoxDecoration(
+                    border: Border(
+                      top: BorderSide(color: Colors.grey, width: 1.0),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.only(bottom: 10.0),
+                        child: Row(
+                          children: [
+                            Text(
+                              'COMMENTS',
+                              style: TextStyle(
+                                color: Colors.grey[50],
+                                fontSize: 10.0,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                       ComentListTile(
                         random: random,
                       ),
@@ -67,7 +169,7 @@ class MovieDetails extends StatelessWidget {
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),
