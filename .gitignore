@@ -13,3 +13,4 @@ Project.xml
 .vscode
 .idea
 pubspec.lock
+build
