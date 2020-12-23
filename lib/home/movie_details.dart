@@ -61,6 +61,10 @@ class MovieDetails extends StatelessWidget {
                       ComentListTile(
                         random: random,
                       ),
+                      SizedBox(height: 10.0),
+                      ComentListTile(
+                        random: random,
+                      ),
                     ],
                   ),
                 )
