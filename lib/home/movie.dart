@@ -7,7 +7,7 @@ class Movie {
   final String title;
   final String posterPath;
   final String overview;
-  final double popularity;
+  final dynamic popularity;
 
   Movie({
     @required this.id,

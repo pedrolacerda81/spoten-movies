@@ -55,6 +55,7 @@ class HomePage extends ConsumerWidget {
                 ),
               );
             } else {
+              debugPrint(e.toString());
               return RefreshIndicator(
                 onRefresh: () => context.refresh(moviesFutureProvider),
                 child: ErrorContainer(
